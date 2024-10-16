@@ -1,0 +1,22 @@
+# This is a generated file. Not intended for manual editing.
+services:
+  newproject:
+    build:
+      context: "/home/pimob/RiderProjects/newProject"
+      dockerfile: "newProject/Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net6.0/newProject.dll"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Development"
+      ASPNETCORE_STATICWEBASSETS: "/app/bin/Debug/net6.0/newProject.staticwebassets.runtime.CT.json"
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "newproject:dev"
+    ports: []
+    volumes:
+    - "/home/pimob/.nuget/packages:/root/.nuget/packages"
+    - "/home/pimob/RiderProjects/newProject/newProject:/app:rw"
+    - "/home/pimob/RiderProjects/newProject:/src:rw"
+    working_dir: "/app"

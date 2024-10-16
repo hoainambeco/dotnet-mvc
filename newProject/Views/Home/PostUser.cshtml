@@ -1,0 +1,13 @@
+@model newProject.Models.User
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
+<form asp-controller="Home" asp-action="PostUser" method="post">
+    ID: <input asp-for="Id"/> <br/>
+    Name: <input asp-for="Name"/> <br/>
+    Email: <input asp-for="Email"/> <br/>
+    <input type="submit" value="post"/>
+</form>
