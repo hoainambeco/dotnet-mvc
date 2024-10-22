@@ -1,7 +1,11 @@
 @{
 ViewData["Title"] = "Login Page";
+var name = "John";
 }
 
 <div class="text-center">
+    <h1>LOGIN</h1>
     <h1 class="display-4">Welcome @ViewData["name"]</h1>
+    <h1>@TempData["a"]</h1>
+    <h1>@name</h1>
 </div>
